@@ -1,0 +1,66 @@
+﻿@model Fierce.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+<style>
+     .validation-summary-errors {
+        color: red;
+  
+    }
+    ol {
+    list-style-type:none;
+    padding:0px;
+    }
+    .container {
+    height:650px;
+    }
+    .maindiv {
+    text-align:center;
+    width:57%;
+    margin-left:200px;
+    margin-top:30px;
+    background-color:#FFF;
+    padding-top:30px;
+    padding-bottom:30px;
+    }
+    .custombutton {
+    margin-left:-35px;
+    margin-top:10px;
+    }
+</style>
+
+<hgroup class="title">
+    @*<h1>@ViewBag.Title.</h1>*@
+   @* <h2>Create a new account.</h2>*@
+</hgroup>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    
+    <fieldset style="margin-top:40px;">
+        <div class="maindiv">
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName, new {Class="txt",style="margin-left: 20px;"  })
+            </li>
+            <li style="margin-top:15px;">
+                @Html.LabelFor(m => m.Password, new {style="margin-left: 5px;"  })
+                @Html.PasswordFor(m => m.Password, new {Class="txt",style="margin-left: 20px;" })
+            </li>
+            <li style="margin-top:15px;">
+                @Html.LabelFor(m => m.ConfirmPassword, new {style="margin-left: -48px;"  })
+                @Html.PasswordFor(m => m.ConfirmPassword, new {Class="txt",style="margin-left: 20px;"})
+            </li>
+        </ol>
+        <input type="submit" value="Register" class="btn custombutton" />
+    </fieldset>
+}
+    </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

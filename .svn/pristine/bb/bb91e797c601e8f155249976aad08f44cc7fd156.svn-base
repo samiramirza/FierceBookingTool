@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FierceCustomBookToolModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="FierceCustomBookToolEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GridItems" EntityType="FierceCustomBookToolModel.GridItem" />
+    <EntitySet Name="Orders" EntityType="FierceCustomBookToolModel.Order" />
+    <EntitySet Name="OrderItems" EntityType="FierceCustomBookToolModel.OrderItem" />
+    <EntitySet Name="OrderSeqNumbers" EntityType="FierceCustomBookToolModel.OrderSeqNumber" />
+    <AssociationSet Name="FK_OrderItem_GridItem" Association="FierceCustomBookToolModel.FK_OrderItem_GridItem">
+      <End Role="GridItem" EntitySet="GridItems" />
+      <End Role="OrderItem" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Order" Association="FierceCustomBookToolModel.FK_OrderItem_Order">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="OrderSeqNumber" EntitySet="OrderSeqNumbers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_OrderSeqNumber" Association="FierceCustomBookToolModel.FK_OrderItem_OrderSeqNumber">
+      <End Role="OrderSeqNumber" EntitySet="OrderSeqNumbers" />
+      <End Role="OrderItem" EntitySet="OrderItems" />
+    </AssociationSet>
+    <EntitySet Name="PunchOutRequests" EntityType="FierceCustomBookToolModel.PunchOutRequest" />
+    <AssociationSet Name="FK_Order_PunchOutRequest" Association="FierceCustomBookToolModel.FK_Order_PunchOutRequest">
+      <End Role="PunchOutRequest" EntitySet="PunchOutRequests" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="GridItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomToolkitModule" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="FlipBookModule" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="AdditonalItem" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ConverstionType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsRequired" Type="Boolean" Nullable="false" />
+    <Property Name="SequenceNumber" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="OrderItems" Relationship="FierceCustomBookToolModel.FK_OrderItem_GridItem" FromRole="GridItem" ToRole="OrderItem" />
+    <Property Type="String" Name="PaceID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PaceFBID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PaceAddID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Template" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="PunchID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrderSeqNumbers" Relationship="FierceCustomBookToolModel.FK_OrderItem_Order" FromRole="Order" ToRole="OrderSeqNumber" />
+    <NavigationProperty Name="PunchOutRequest" Relationship="FierceCustomBookToolModel.FK_Order_PunchOutRequest" FromRole="Order" ToRole="PunchOutRequest" />
+    <Property Type="Int32" Name="DROrderId" />
+    <Property Type="String" Name="TotalMoney" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShipAddress" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShipName" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShipDeliverTo" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShipStreet" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShipCity" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShipState" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShipPostalCode" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShipCountry" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BillAddress" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BillName" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BillStreet" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BillCity" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BillState" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BillPostalCode" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BillCountry" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UnitPriceMoney" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChargeMoney" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UnitOfMeasure" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LeadTime" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="OrderDate" Precision="3" />
+    <Property Type="String" Name="ExtrinsicDeliveryType" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ExtrinsicPlacedByUser" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SupplierPartAuxiliaryID" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProjectName" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderSeqId" Type="Int32" Nullable="false" />
+    <Property Name="GridId" Type="Int32" Nullable="false" />
+    <Property Name="SeqNumber" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="GridItem" Relationship="FierceCustomBookToolModel.FK_OrderItem_GridItem" FromRole="OrderItem" ToRole="GridItem" />
+    <NavigationProperty Name="OrderSeqNumber" Relationship="FierceCustomBookToolModel.FK_OrderItem_OrderSeqNumber" FromRole="OrderItem" ToRole="OrderSeqNumber" />
+  </EntityType>
+  <EntityType Name="OrderSeqNumber">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Order" Relationship="FierceCustomBookToolModel.FK_OrderItem_Order" FromRole="OrderSeqNumber" ToRole="Order" />
+    <NavigationProperty Name="OrderItems" Relationship="FierceCustomBookToolModel.FK_OrderItem_OrderSeqNumber" FromRole="OrderSeqNumber" ToRole="OrderItem" />
+  </EntityType>
+  <Association Name="FK_OrderItem_GridItem">
+    <End Role="GridItem" Type="FierceCustomBookToolModel.GridItem" Multiplicity="1" />
+    <End Role="OrderItem" Type="FierceCustomBookToolModel.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GridItem">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="GridId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Order">
+    <End Role="Order" Type="FierceCustomBookToolModel.Order" Multiplicity="1" />
+    <End Role="OrderSeqNumber" Type="FierceCustomBookToolModel.OrderSeqNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderSeqNumber">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_OrderSeqNumber">
+    <End Role="OrderSeqNumber" Type="FierceCustomBookToolModel.OrderSeqNumber" Multiplicity="1" />
+    <End Role="OrderItem" Type="FierceCustomBookToolModel.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderSeqNumber">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="OrderSeqId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PunchOutRequest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RequestExtrinsicUser" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RequestSupplierPartID" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RequestExtrinsicRevision" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="false" Precision="3" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="PunchOutXml" MaxLength="4096" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Orders" Relationship="FierceCustomBookToolModel.FK_Order_PunchOutRequest" FromRole="PunchOutRequest" ToRole="Order" />
+  </EntityType>
+  <Association Name="FK_Order_PunchOutRequest">
+    <End Type="FierceCustomBookToolModel.PunchOutRequest" Role="PunchOutRequest" Multiplicity="1" />
+    <End Type="FierceCustomBookToolModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PunchOutRequest">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="PunchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

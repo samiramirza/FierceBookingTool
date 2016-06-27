@@ -1,0 +1,24 @@
+﻿using Fierce.BAL.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Fierce.BAL.Interface
+{
+    public  interface IFierceCustom
+    {
+        FierceBook InsertPunchOutRequest(FierceBook FierceBook);
+        FierceBook GetPunchOutRequestById(int id);
+        List<GridDisplay> GetGridItems(string ConverType);
+        int GetLastSequenceNumber(string type);
+        GridDisplay GetGridItems(int id, int seq, string type);
+        void InsertOrderItems(List<OrderInsert> lstOrder, string username, int punchID, string projectName);
+        List<FierceOutRequest> GetOrderDetailsById(int orderId);
+		GridDisplay EditGridItems(GridDisplay gridItems, int id);
+        GridDisplay AddGridItems(GridDisplay gridItems,int seq);
+        bool DeleteModule(int id, string template);
+        List<ViewOrders> ViewAllOrders(DateTime startDate, DateTime endDate, string username, int DROrderID);
+        void UpdateOrderItems(FierceOutRequest objfierce);
+    }
+}

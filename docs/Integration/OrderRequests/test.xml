@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<cXML version="1.1.007" xml:lang="en-US" xmlID="20080327T10:38:13-04:00@aig.directedje.com" timestamp="20080327T10:38:13-04:00">
+	<Header>
+		<From>
+			<Credential domain="DUNS">
+				<Identity>012345678</Identity>
+			</Credential>
+		</From>
+		<To>
+			<Credential domain="DUNS">
+				<Identity>012345678</Identity>
+			</Credential>
+		</To>
+		<Sender>
+			<Credential domain="DUNS">
+				<Identity>012345678</Identity>
+				<SharedSecret>shhh</SharedSecret>
+			</Credential>
+			<UserAgent>Direct Response</UserAgent>
+		</Sender>
+	</Header>
+	<Request deploymentMode="production">
+		<OrderRequest>
+			<OrderRequestHeader orderDate="20080327T10:38:14-04:00" orderID="399358" orderType="regular" orderVersion="1" type="new">
+				<Total>
+					<Money currency="USD">0</Money>
+				</Total>
+				<ShipTo>
+					<Address addressID="W00001" isoCountryCode="US">
+						<Name xml:lang="en">EDJE TEST</Name>
+						<PostalAddress name="default">
+							<DeliverTo>EDJE TEST DO NOT SHIP</DeliverTo>
+							<DeliverTo>EDJE TEST</DeliverTo>
+							<Street>EDJE TEST</Street>
+							<City>DO NOT SHIP</City>
+							<State>XX</State>
+							<PostalCode>EDJE</PostalCode>
+							<Country isoCountryCode="US">United States</Country>
+						</PostalAddress>
+						<Email name="default" preferredLang="en-US">example@directedje.com</Email>
+					</Address>
+				</ShipTo>
+				<BillTo>
+					<Address addressID="W00001" isoCountryCode="US">
+						<Name xml:lang="en">EDJE TEST</Name>
+						<PostalAddress name="default">
+							<Street>EDJE TEST</Street>
+							<City>DO NOT SHIP</City>
+							<State>XX</State>
+							<PostalCode>EDJE</PostalCode>
+							<Country isoCountryCode="US">United States</Country>
+						</PostalAddress>
+					</Address>
+				</BillTo>
+				<PaymentTerm payInNumberOfDays="0"></PaymentTerm>
+			</OrderRequestHeader>
+			<ItemOut lineNumber="1" quantity="100">
+				<ItemID>
+					<SupplierPartID>FV22YB</SupplierPartID>
+					<SupplierPartAuxiliaryID>ITEMNUMBER</SupplierPartAuxiliaryID>
+				</ItemID>
+				<ItemDetail>
+					<UnitPrice>
+						<Money currency="USD">0</Money>
+					</UnitPrice>
+					<Description xml:lang="en">Example Item</Description>
+					<UnitOfMeasure>EA</UnitOfMeasure>
+					<URL name="NOPEleId">https://yoururl.com/order.aspx</URL>
+					<LeadTime>0</LeadTime>
+					<Extrinsic name="OrderId">399358</Extrinsic>
+				</ItemDetail>
+				<Distribution>
+					<Charge>
+						<Money currency="USD">0</Money>
+					</Charge>
+				</Distribution>
+			</ItemOut>
+		</OrderRequest>
+	</Request>
+</cXML>

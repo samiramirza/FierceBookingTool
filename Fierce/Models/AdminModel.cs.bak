@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace Fierce.Models
+{
+    public class AdminModel
+    {
+        public List<Fierce.BAL.Models.GridDisplay> lstGridDisplay { get; set; }
+        public Fierce.BAL.Models.GridDisplay objGridDisplay { get; set; }
+        public string CustomToolkitModule { get; set; }
+        public string FlipBookModule { get; set; }
+        public string AdditonalItem { get; set; }
+        public string Type { get; set; }
+     
+        public string SeqNumber { get; set; }
+        public int id { get; set; }
+        public int hiddenId { get; set; }
+        public bool IsRequired { get; set; }
+        public List<string> seqlst { get; set; }
+        public string hdnType { get; set; }
+        public string ClickType { get; set; }
+        
+    }
+}

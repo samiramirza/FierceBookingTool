@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.1.010/cXML.dtd">
+<cXML version="1.1.007" xml:lang="en-US" payloadID="20080121081729.918740112.-75516@example.com" timestamp="2008-01-21T08:17:29+00:00">
+  <Header>
+
+      <From>
+
+         <Credential domain="DUNS">
+
+           <Identity>012345678</Identity>
+
+         </Credential>
+
+      </From>
+
+      <To>
+
+         <Credential domain="DUNS">
+
+            <Identity>555554444</Identity>
+
+         </Credential>
+
+      </To>
+
+      <Sender>
+
+         <Credential domain="DUNS">
+
+           <Identity>012345678</Identity>
+
+            <SharedSecret>shhh</SharedSecret>
+
+         </Credential>
+
+         <UserAgent>Direct Response</UserAgent>
+
+      </Sender>
+
+   </Header>
+
+   <Request>
+
+      <PunchOutSetupRequest operation="create">
+
+         <BuyerCookie>NOTUSED</BuyerCookie>
+
+         <Extrinsic name="User">RTBP445</Extrinsic>
+
+         <BrowserFormPost>
+
+            <URL>https://shops.directedje.com/demo/pod-punch-in.asp</URL>
+
+         </BrowserFormPost>
+
+         <Contact>
+
+            <Email>John.Doe@example.com</Email>
+
+         </Contact>
+
+         <SupplierSetup>
+
+            <URL>https://urltoyoursystem.com/endpoint.aspx</URL>
+
+         </SupplierSetup>
+
+         <SelectedItem>
+
+           <ItemID>
+
+             <SupplierPartID>ITEMNUMBER</SupplierPartID>
+
+             <SupplierPartAuxiliaryID>Description of Item</SupplierPartAuxiliaryID>
+
+           </ItemID>
+
+         </SelectedItem>
+
+      </PunchOutSetupRequest>
+
+   </Request>
+
+</cXML>
+

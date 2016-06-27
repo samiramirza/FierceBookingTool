@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="17ac45a412494e8a800edc26d1cbc420" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="FierceCustomBookToolModel.GridItem" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="FierceCustomBookToolModel.Order" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FierceCustomBookToolModel.OrderItem" Width="1.5" PointX="7.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FierceCustomBookToolModel.OrderSeqNumber" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="FierceCustomBookToolModel.FK_OrderItem_GridItem" ManuallyRouted="false" />
+        <AssociationConnector Association="FierceCustomBookToolModel.FK_OrderItem_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="FierceCustomBookToolModel.FK_OrderItem_OrderSeqNumber" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FierceCustomBookToolModel.PunchOutRequest" Width="1.5" PointX="10.981253295662466" PointY="31.541777282739886" />
+        <AssociationConnector Association="FierceCustomBookToolModel.FK_Order_PunchOutRequest" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

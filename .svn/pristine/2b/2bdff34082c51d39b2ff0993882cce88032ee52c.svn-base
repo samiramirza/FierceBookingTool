@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repositories>
+  <repository path="..\Fierce.BAL\packages.config" />
+  <repository path="..\Fierce.DAL\packages.config" />
+  <repository path="..\Fierce\packages.config" />
+</repositories>

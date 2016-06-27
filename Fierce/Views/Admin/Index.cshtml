@@ -1,0 +1,497 @@
+﻿@model Fierce.Models.AdminModel
+@{
+    ViewBag.Title = "Index";
+
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/Custom.css" rel="stylesheet" />
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<style>
+    .ui-state-hover {
+        background: lightyellow;
+    }
+
+    .ui-state-active {
+        background: lightgray;
+    }
+
+    .popup {
+        margin-left: -60px;
+        width: 140%;
+    }
+    .iteration {
+    border-left: 1px solid #dfdfdf;
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+    .fulliteration {
+        float:none;
+    }
+    .hello {
+    
+    text-shadow:blue 1px 1px 1px 2px !important;
+    hyphens:auto !important;
+    }
+    .addbtn {
+        margin-right:0px;margin-left:35px;
+    }
+    .nav-tabs > li.active >a{
+        background-color:#eee;
+    }
+</style>
+
+@using (Html.BeginForm("index", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.hdnType)
+    @Html.HiddenFor(m => m.hiddenId)
+    @Html.HiddenFor(m => m.ClickType)
+  
+    <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 outerdiv">
+    <div class="col-xs-12">
+        <div class="navMenu col-xs-6 nopad">
+           @*  <input id="portugese" class="btn custombutton addbtn" type="button" value="Portugese Modules">
+            <input id="spanish" class="btn custombutton addbtn" type="button" value="Spanish Modules">
+             <input  class="btn custombutton addbtn hidden" type="button" value="Custom Kit Modules">*@
+             <ul class="nav nav-tabs " style="">
+                 <li  id="custom" class=""><a href="#" class="second">Custom</a></li>
+                 <li id="spanish"><a href="#" class="second">Spanish</a></li>
+                 <li id="portugese" ><a href="#" class="first">Portugese</a></li>               
+                
+            </ul>
+        </div>
+        <div class="navMenu col-xs-6 nopad text-right" >
+        
+            <input id="viewOrder" class="btn custombutton addbtn" type="button" value="View Orders">
+            <input id="add" class="btn custombutton addbtn" type="button" value="+ Add">
+        </div>
+    </div>
+   
+    <div class="col-xs-12">
+        <table class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainGrid table_1">
+            <thead>
+                @if (Model.lstGridDisplay != null && Model.lstGridDisplay.Count() > 0)
+                {
+                    <tr class="fulliteration">
+                        <th class="iteration email_break">Seq.No</th>
+                        <th class="iteration email_break">Modules</th>
+                        <th class="iteration email_break">Edit</th>
+                        <th class="iteration email_break">Delete</th>
+
+                    </tr>
+                }
+            </thead>
+            <tbody>
+                @if (Model.lstGridDisplay != null && Model.lstGridDisplay.Count() > 0)
+                {
+                    foreach (var i in Model.lstGridDisplay)
+                    {
+                        string complete = "";
+                    <tr class="fulliteration  row_@i.Id" data-id="@i.Id">
+                        <td class="iterationchk email_break">@i.SequenceNumber</td>
+                          @if (i.CustomToolkitModule != null && i.CustomToolkitModule != "")
+                          {
+                              complete = i.CustomToolkitModule;
+                          }
+                        @if (i.FlipBookModule != null && i.FlipBookModule != "")
+                        {
+                            if (complete != "")
+                            {
+                                complete += "/" + i.FlipBookModule;
+                            }
+                            else
+                            {
+                                complete = i.FlipBookModule;
+                            }
+                        }
+                        @if (i.AdditonalItem != null && i.AdditonalItem != "")
+                        {
+                            if (complete != "")
+                            {
+                                complete += "/" + i.AdditonalItem;
+                            }
+                            else
+                            {
+                                complete = i.AdditonalItem;
+                            }
+                        }
+                        <td class="iteration email_braek">@complete</td>
+                        <td class="iteration email_break"><a class="edit" href="#associate_modal" data-toggle="modal" data-id="@i.Id" data-seq="@i.SequenceNumber">Edit</a></td>
+                        <td class="iteration email_break"><a class="delete" data-id="@i.Id" href="#">Delete</a></td>
+
+                        @* <a  href="/Admin/MyOrderDetails?userid=@Model.UserID&id=@i.Id">*@
+                    </tr>
+                    }
+                }
+                else
+                {
+                    <p class="amount">No Orders.</p>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="associate_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog text-left" style="width: 400px;">
+            <div class="modal-content popup" style="float: left;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title text-blue" id="myModalLabel">Add/Edit Book Module</h3>
+                </div>
+                <div class="modal-body" data-spy="scroll">
+                 
+                    <div class="col modalCol">
+                        <div class="col-xs-5">
+                            <label class="custmod">Custom Toolkit Module</label>
+                        </div>
+                        <div class="col-xs-7">
+                            @Html.TextBoxFor(m => m.CustomToolkitModule, new { Class = "txt character", maxlength = "100" })
+                            <span class="field-validation-error" id="errCustomToolkitModule"></span>
+                        </div>
+                    </div>
+
+                     <div class="col modalCol">
+                        <div class="col-xs-5">
+                            <label class="custPace">Custom Toolkit Pace ID</label>
+                        </div>
+                        <div class="col-xs-7">
+                            @Html.TextBoxFor(m => m.CustomToolkitPaceID, new { Class = "txt character", maxlength = "100" })
+                            <span class="field-validation-error" id="errCustomToolkitPaceID"></span>
+                        </div>
+                    </div>
+
+                    <div class="col modalCol">
+                        <div class="col-xs-5">
+                            <label>Flip Book Module</label>
+                        </div>
+                        <div class="col-xs-7">
+                            @Html.TextBoxFor(m => m.FlipBookModule, new { Class = "txt character", maxlength = "100" })
+                            <span class="field-validation-error" id="errFlipBookModule"></span>
+                        </div>
+                    </div>
+
+                    <div class="col modalCol">
+                        <div class="col-xs-5">
+                            <label>Flip Book Pace ID</label>
+                        </div>
+                        <div class="col-xs-7">
+                            @Html.TextBoxFor(m => m.FlipBookModulePaceID, new { Class = "txt character", maxlength = "100" })
+                            <span class="field-validation-error" id="errFlipBookModulePaceID"></span>
+                        </div>
+                    </div>
+                    <div class="col modalCol">
+                        <div class="col-xs-5">
+                            <label>Additonal Item</label>
+                        </div>
+                        <div class="col-xs-7">
+                            @Html.TextBoxFor(m => m.AdditonalItem, new { Class = "txt", maxlength = "100" })
+                            <span class="field-validation-error" id="errAdditonalItem"></span>
+                        </div>
+                    </div>
+
+                    <div class="col modalCol">
+                        <div class="col-xs-5">
+                            <label>Additonal Item Pace ID</label>
+                        </div>
+                        <div class="col-xs-7">
+                            @Html.TextBoxFor(m => m.AdditonalItemPaceID, new { Class = "txt character", maxlength = "100" })
+                            <span class="field-validation-error" id="errAdditonalItemPaceID"></span>
+                        </div>
+                    </div>
+                    <div class="col modalCol">
+                        <div class="col-xs-5">
+                            <label>IsRequired</label>
+                        </div>
+                        <div class="col-xs-7">
+                            @Html.CheckBoxFor(m => m.IsRequired, new { @class = "reqstatus pull-left" })
+                            <span class="field-validation-error" id="errIsRequired"></span>
+                        </div>
+                    </div>
+
+                     <div class="col modalCol seqdiv">
+                        <div class="col-xs-5">
+                            <label>Sequence Number</label>
+                        </div>
+                        <div class="col-xs-7">
+                            @Html.DropDownListFor(m=>m.SeqNumberSelected,Model.lstSeq,new {  @class = "reqstatus" })
+                            <span class="field-validation-error" id="errIsseq"></span>
+                        </div>
+                    </div>
+                    @* 
+                    <div class="col modalCol" style="clear: both">
+                        <div class="col-xs-5">
+                            <label>Sequence NO.</label></div>
+                        <div class="col-xs-7">
+
+                           @Html.DropDownListFor(m=>m.lstSeq,new {  @class = "reqstatus" })
+                        </div>
+                    </div>*@
+
+                </div>
+                <div class="modal-footer" style="background: #fff; margin-top: 7px; border: none; padding-left: 38px; text-align: left; float: left; border-radius: 6px;">
+                    <button type="button" id="btnSaveModule" class="btn custombutton">ADD</button>
+                    <button type="button" class="btn custombutton" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    
+    </div>
+}
+<script type="text/javascript">
+
+   
+    $(document).ready(function () {
+
+        $('#portugese').removeClass("active");
+        $('#spanish').removeClass("active");
+        $('#custom').addClass("active");
+
+        if ('@Model.Result' == 'True') {
+            alert("Module Deleted.");
+        }
+        $('.headingcover').find('p').text("Manage Book Module");
+        var actionType = "";
+        if ('@Model.hdnType' == "CT") {
+
+            $('#portugese').removeClass("active");
+            $('#spanish').removeClass("active");
+            $('#custom').addClass("active");
+        }
+        else if ('@Model.hdnType' == "ST") {
+            $('#portugese').removeClass("active");
+            $('#spanish').addClass("active");
+            $('#custom').removeClass("active");
+        }
+        else if ('@Model.hdnType' == "PT") {
+            $('#portugese').addClass("active");
+            $('#spanish').removeClass("active");
+            $('#custom').removeClass("active");
+        }
+
+        $('#portugese').on("click", function () {
+            $('#hdnType').val('PT');
+            $('#ClickType').val("Get");
+            $('form').submit();
+        });
+        $('#spanish').on("click", function () {
+            $('#hdnType').val('ST');
+            $('#ClickType').val("Get");
+            $('form').submit();
+        });
+        $('#custom').on("click", function () {
+            $('#hdnType').val('CT');
+            $('#ClickType').val("Get");
+            $('form').submit();
+        });
+
+        $('#add').on("click", function () {
+            actionType = "save";
+            $("#btnSaveModule").text('ADD');
+            $("#CustomToolkitModule").val("");
+            $("#FlipBookModule").val("");
+            $("#AdditonalItem").val("");
+            $('#CustomToolkitPaceID').val("");
+            $('#FlipBookModulePaceID').val("");
+            $('#AdditonalItemPaceID').val("");
+            $('.seqdiv').hide();
+            $("#IsRequired").attr("checked",false);
+            $('#associate_modal').modal('show');
+        });
+
+        $('#viewOrder').on("click", function () {
+            window.location.href = '@Url.Action("ViewOrders", "Admin")';
+        });
+        $('.delete').on("click", function () {
+            if (confirm("Are you sure?")) {
+                $('#ClickType').val("Delete");
+                $('#hiddenId').val($(this).attr('data-id'));
+                $('form').submit();
+               @* var delId = $(this).attr('data-id');
+                var dataValues = {
+                    id: $(this).attr('data-id'),
+                }
+                $.ajax({
+                    url: '@Url.Action("DeleteModule", "Admin")',
+                    type: 'POST',
+                    data: dataValues,
+                    dataType: 'json',
+                    success: function (response) {
+                        if (response.ToolkitValues != "" && response.ToolkitValues == true) {
+                            alert("Module Deleted.");
+                            $('tr.row_' + delId).remove();
+                        }
+                    },
+                    error: function (error) {
+                        alert("Something went wrong.");
+                    }
+                });*@
+            }
+            else
+            {
+                return false;
+            }
+        });
+
+        $('.edit').on("click", function () {
+            if ('@Model.hdnType' == "PT") {
+                $(".custmod").html('Portugese Toolkit Module');
+                $(".custPace").html('Portugese Toolkit Pace ID');
+            }
+            else if ('@Model.hdnType' == "ST") {
+                $(".custmod").html('Spanish Toolkit Module');
+                $(".custPace").html('Spanish Toolkit Pace ID');
+            }
+            else if ('@Model.hdnType' == "CT")
+            {
+                $(".custmod").html('Custom Toolkit Module');
+                $(".custPace").html('Custom Toolkit Pace ID');
+            }
+
+            $("#CustomToolkitModule").val("");
+            $("#FlipBookModule").val("");
+            $("#AdditonalItem").val("");
+            $('#CustomToolkitPaceID').val("");
+            $('#FlipBookModulePaceID').val("");
+            $('#AdditonalItemPaceID').val("");
+            $('.field-validation-error').hide();
+                actionType = "edit";
+                $("#btnSaveModule").text('UPDATE');
+                $('.seqdiv').show();
+
+                var dataValues = {
+                    id: $(this).attr('data-id'),
+                    seq: $(this).attr('data-seq'),
+                    type: '@Model.hdnType'
+                }
+                $.ajax({
+                    url: '@Url.Action("EditModule", "Admin")',
+                type: 'POST',
+                data: dataValues,
+                dataType: 'json',
+                success: function (response) {
+                    if (response.ToolkitValues != "") {
+                        //if (response.ToolkitValues.ConverstionType == "EC") {
+                        //    $("#EcType").attr("checked", true);
+                        //}
+                        //else {
+                        //    $("#EdType").attr("checked", true);
+                        //}
+                       
+                        if (response.ToolkitValues.IsRequired == true) {
+                            $("#IsRequired").prop("checked", true);
+                        }
+                        else {
+                            $("#IsRequired").prop("checked", false);
+                        }
+                        $("#CustomToolkitModule").val(response.ToolkitValues.CustomToolkitModule);
+                        $("#FlipBookModule").val(response.ToolkitValues.FlipBookModule);
+                        $("#AdditonalItem").val(response.ToolkitValues.AdditonalItem);
+                        $("#hiddenId").val(response.ToolkitValues.Id);
+                        $("#CustomToolkitPaceID").val(response.ToolkitValues.PaceID);
+                        $("#FlipBookModulePaceID").val(response.ToolkitValues.PaceFBID );
+                        $("#AdditonalItemPaceID").val(response.ToolkitValues.PaceAddID);
+                        $("select#SeqNumberSelected option")
+                    .each(function () { this.selected = (this.text == response.ToolkitValues.SequenceNumber); });
+                        
+                    }
+                    else {
+                        alert("Something went wrong.");
+                    }
+                },
+                error: function (error) {
+                }
+            });
+        });
+
+            $('#btnSaveModule').on("click", function () {
+              
+                var count = 0;
+                var flag = true;
+                if ($('#CustomToolkitModule').val() == "") {
+                    count += 1;
+                }
+                if ($('#FlipBookModule').val() == "") {
+                    count += 1;
+                }
+                if ($('#AdditonalItem').val() == "") {
+                    count += 1;
+                }
+                if (count == 3) {
+                    flag = false;
+                    $('#errIsRequired').html("Please enter atleast one module.");
+                }
+                else
+                {
+
+                    $('#errIsRequired').html("Please enter atleast one module.").hide();
+                    if ($('#CustomToolkitModule').val() != "" && $('#CustomToolkitPaceID').val() == "") {
+                        $('#errCustomToolkitPaceID').html("Required").show();
+                        $('#errCustomToolkitModule').html("Required").hide();
+                        flag = false;
+                    }
+                    else if ($('#CustomToolkitModule').val() == "" && $('#CustomToolkitPaceID').val()!= "") {
+                        $('#errCustomToolkitPaceID').html("Required").hide();
+                        $('#errCustomToolkitModule').html("Required").show();
+                        flag = false;
+
+                    }
+                    else {
+                        $('#errCustomToolkitPaceID').html("Required").hide();
+                        $('#errCustomToolkitModule').html("Required").hide();
+                        
+                    }
+
+                    if ($('#FlipBookModule').val() != "" && $('#FlipBookModulePaceID').val() == "") {
+                        $('#errFlipBookModulePaceID').html("Required").show();
+                        $('#errFlipBookModule').html("Required").hide();
+                        flag = false;
+                    }
+                    else if ($('#FlipBookModule').val() == "" && $('#FlipBookModulePaceID').val()!= "") {
+                        $('#errFlipBookModulePaceID').html("Required").hide();
+                        $('#errFlipBookModule').html("Required").show();
+                        flag = false;
+                    }
+                    else {
+                        $('#errFlipBookModulePaceID').html("Required").hide();
+                        $('#errFlipBookModule').html("Required").hide();
+                    }
+
+                    if ($('#AdditonalItem').val() != "" && $('#AdditonalItemPaceID').val() == "") {
+                        $('#errAdditonalItemPaceID').html("Required").show();
+                        $('#errAdditonalItem').html("Required").hide();
+                        flag = false;
+                    }
+                    else if ($('#AdditonalItem').val() == "" && $('#AdditonalItemPaceID').val()!= "") {
+                        $('#errAdditonalItemPaceID').html("Required").hide();
+                        $('#errAdditonalItem').html("Required").show();
+                        flag = false;
+                    }                        
+                    else {
+                        $('#errAdditonalItemPaceID').html("Required").hide();
+                        $('#errAdditonalItem').html("Required").hide();
+                    }
+                  
+                    if (flag == true) {
+                        if (actionType == "edit") {
+                            $('#ClickType').val("Edit");
+                            $('form').submit();
+                        }
+                        else {
+                            $('#hdnType').val('@Model.hdnType');
+                         
+                            $('#ClickType').val("Save");
+                            $('form').submit();
+                        }
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            });
+        });
+
+</script>

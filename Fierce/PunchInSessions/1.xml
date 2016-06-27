@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE cXML SYSTEM "http://xml.cxml.org/schemas/cXML/1.1.007/cXML.dtd"[]>
+<cXML version="1.1.007" xml:lang="en-US" payloadID="20150326T19:32:28-04:00@aig.directedje.com" timestamp="20150326T19:32:28-04:00">
+  <Header>
+    <From>
+      <Credential domain="DUNS">
+        <Identity>012345678</Identity>
+      </Credential>
+    </From>
+    <To>
+      <Credential domain="DUNS">
+        <Identity>02-528-7058</Identity>
+      </Credential>
+    </To>
+    <Sender>
+      <Credential domain="DUNS">
+        <Identity>012345678</Identity>
+        <SharedSecret>iIkMEfuKIXFHgOw6O1QC5YxuxzTrXd25dWfB882uR61gaQw9jAOFHKUY9NXg0fQT</SharedSecret>
+      </Credential>
+      <UserAgent>Direct Response</UserAgent>
+    </Sender>
+  </Header>
+  <Request>
+    <PunchOutSetupRequest operation="create">
+      <BuyerCookie>NOTUSED</BuyerCookie>
+      <Extrinsic name="User">test@test.com</Extrinsic>
+      <BrowserFormPost>
+        <URL>https://shops3.directedje.com/fierce/pod-punch-in.asp</URL>
+      </BrowserFormPost>
+      <Contact>
+        <Email>test@test.com</Email>
+      </Contact>
+      <SupplierSetup>
+        <URL>http://50.57.7.78/fierce/DEIntegration/AcceptPunchOutRequest</URL>
+        <Extrinsic name="sessionid">553813819</Extrinsic>
+      </SupplierSetup>
+      <SelectedItem>
+        <ItemID>
+          <SupplierPartID>BookTest1</SupplierPartID>
+          <SupplierPartAuxiliaryID>Custom+Book+Test</SupplierPartAuxiliaryID>
+          <Extrinsic name="revision">none</Extrinsic>
+        </ItemID>
+      </SelectedItem>
+    </PunchOutSetupRequest>
+  </Request>
+</cXML>

@@ -1,0 +1,135 @@
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.dll.config
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.dll
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.pdb
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.dll
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.BAL.dll
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.BAL.pdb
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.xml
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.csprojResolveAssemblyReference.cache
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.dll
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.pdb
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.dll.config
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.pdb
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.BAL.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.BAL.pdb
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.xml
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.csprojResolveAssemblyReference.cache
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.dll.config
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.csprojResolveAssemblyReference.cache
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.DAL\bin\Release\Fierce.DAL.dll.config
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.DAL\bin\Release\Fierce.DAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.DAL\bin\Release\Fierce.DAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.DAL\bin\Release\EntityFramework.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.DAL\bin\Release\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.DAL\bin\Release\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.DAL\bin\Release\EntityFramework.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.DAL\obj\Release\Fierce.DAL.csprojResolveAssemblyReference.cache
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.DAL\obj\Release\Fierce.DAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.DAL\obj\Release\Fierce.DAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\Fierce.DAL.dll.config
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\Fierce.DAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\Fierce.DAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\EntityFramework.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\EntityFramework.SqlServer.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\System.Data.SqlServerCe.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\EntityFramework.xml
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\EntityFramework.SqlServer.xml
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.xml
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\obj\Release\Fierce.DAL.csprojResolveAssemblyReference.cache
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\obj\Release\Fierce.DAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.DAL\obj\Release\Fierce.DAL.pdb
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServer.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\System.Data.SqlServerCe.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServer.xml
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.xml
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.dll.config
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.pdb
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServer.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.BAL.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\System.Data.SqlServerCe.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\Fierce.BAL.pdb
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.xml
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServer.xml
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.xml
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.csprojResolveAssemblyReference.cache
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.pdb
+G:\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.dll.config
+G:\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.dll
+G:\Fierce\Fierce.DAL\bin\Release\Fierce.DAL.pdb
+G:\Fierce\Fierce.DAL\bin\Release\EntityFramework.dll
+G:\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServer.dll
+G:\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.dll
+G:\Fierce\Fierce.DAL\bin\Release\Fierce.BAL.dll
+G:\Fierce\Fierce.DAL\bin\Release\System.Data.SqlServerCe.dll
+G:\Fierce\Fierce.DAL\bin\Release\Fierce.BAL.pdb
+G:\Fierce\Fierce.DAL\bin\Release\EntityFramework.xml
+G:\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServer.xml
+G:\Fierce\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.xml
+G:\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.csprojResolveAssemblyReference.cache
+G:\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.dll
+G:\Fierce\Fierce.DAL\obj\Release\Fierce.DAL.pdb
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\Fierce.DAL.dll.config
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\Fierce.DAL.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\Fierce.DAL.pdb
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.SqlServer.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\Fierce.BAL.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\System.Data.SqlServerCe.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\Fierce.BAL.pdb
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.xml
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.SqlServer.xml
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.xml
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\obj\Release\Fierce.DAL.csprojResolveAssemblyReference.cache
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\obj\Release\Fierce.DAL.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.DAL\obj\Release\Fierce.DAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\Fierce.DAL.dll.config
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\Fierce.DAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\Fierce.DAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.SqlServer.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\System.Data.SqlServerCe.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.SqlServer.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\obj\Release\Fierce.DAL.csprojResolveAssemblyReference.cache
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\obj\Release\Fierce.DAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.DAL\obj\Release\Fierce.DAL.pdb
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\Fierce.DAL.dll.config
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\Fierce.DAL.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\Fierce.DAL.pdb
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\EntityFramework.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\EntityFramework.SqlServer.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\System.Data.SqlServerCe.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\EntityFramework.xml
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\EntityFramework.SqlServer.xml
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\bin\Release\EntityFramework.SqlServerCompact.xml
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\obj\Release\Fierce.DAL.csprojResolveAssemblyReference.cache
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\obj\Release\Fierce.DAL.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.DAL\obj\Release\Fierce.DAL.pdb

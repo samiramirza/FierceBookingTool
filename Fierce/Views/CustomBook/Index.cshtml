@@ -1,0 +1,46 @@
+﻿@model Fierce.Models.FierceBookModel
+@{
+    ViewBag.Title = "Index";
+    
+}
+<h2>hello custom book</h2>
+@ViewBag.QString
+
+
+@if(Model!=null && Model.PunchOutRequestData!=null)
+{
+<ul>
+
+    <li>ID: @Model.PunchOutRequestData.Id
+    </li>
+    <li>From Identity: @Model.PunchOutRequestData.fromIdentity
+    </li>
+    <li>To Identity: @Model.PunchOutRequestData.toIdentity
+    </li>
+    <li>Sender Identity: @Model.PunchOutRequestData.senderIdentity
+    </li>
+    <li>Shared Secret: @Model.PunchOutRequestData.sharedSecret
+    </li>
+    <li>User Agent: @Model.PunchOutRequestData.userAgent
+    </li>
+    <li>Buyer Cookie: @Model.PunchOutRequestData.buyerCookie
+    </li>
+    <li>Extrinsic User:  @Model.PunchOutRequestData.extrinsic_user
+    </li>
+    <li>BrowserFormPost Url: @Model.PunchOutRequestData.browserFormPost_Url
+    </li>
+    <li>Email: @Model.PunchOutRequestData.email
+    </li>
+    <li>Extrinsic Revision:  @Model.PunchOutRequestData.extrinsic_Revision
+    </li>
+    <li>Extrinsic SessionId: @Model.PunchOutRequestData.extrinsic_SessionId
+    </li>
+    <li>SupplierPartID: @Model.PunchOutRequestData.supplierPartID
+    </li>
+    <li>SupplierSetup Url:  @Model.PunchOutRequestData.supplierSetup_Url
+    </li>
+    <li>SupplierPartAuxiliaryID: @Model.PunchOutRequestData.supplierPartAuxiliaryID
+    </li>
+
+</ul>
+}

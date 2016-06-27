@@ -1,0 +1,45 @@
+<cXML version="1.1.007" xml:lang="en-US" payloadID="20150515T02:13:09-04:00@aig.directedje.com" timestamp="20150515T02:13:09-04:00">
+  <Header>
+    <From>
+      <Credential domain="DUNS">
+        <Identity>012345678</Identity>
+      </Credential>
+    </From>
+    <To>
+      <Credential domain="DUNS">
+        <Identity>02-528-7058</Identity>
+      </Credential>
+    </To>
+    <Sender>
+      <Credential domain="DUNS">
+        <Identity>012345678</Identity>
+      </Credential>
+      <UserAgent>Direct Response</UserAgent>
+    </Sender>
+  </Header>
+  <Message >
+    <PunchOutOrderMessage>
+      <BuyerCookie>NOTUSED</BuyerCookie>
+      <PunchOutOrderMessageHeader operationAllowed="inspect">
+        <Total>
+          <Money currency="USD">0.0</Money>
+        </Total>
+      </PunchOutOrderMessageHeader>
+      <ItemIn quantity="1">
+        <ItemID>
+          <SupplierPartID>BookTest1</SupplierPartID>
+          <SupplierPartAuxiliaryID>Custom+Toolkit+Test</SupplierPartAuxiliaryID>
+        </ItemID>
+        <ItemDetail>
+          <UnitPrice>
+            <Money currency="USD"></Money>
+          </UnitPrice>
+          <Description xml:lang="en">Description of Item</Description>
+          <UnitOfMeasure>EA</UnitOfMeasure>
+          <Classification domain="UNSPSC">NOTUSED</Classification>
+       </ItemDetail>
+      </ItemIn>
+    </PunchOutOrderMessage>
+  </Message>
+</cXML>
+

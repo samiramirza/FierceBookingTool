@@ -1,0 +1,157 @@
+﻿using Fierce.BAL.Interface;
+using Fierce.BAL.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Fierce.DAL.Data
+{
+    public class FierceData : IFierceCustom
+    {
+        public FierceBook InsertPunchOutRequest(FierceBook objFierceBook)
+        {         
+           
+            using (var context = new FierceCustomBookToolEntities())
+            {
+                PunchOutRequest objPunchOut = new PunchOutRequest();
+                objPunchOut.FromIdentiy = objFierceBook.fromIdentity;
+                objPunchOut.ToIdentity = objFierceBook.toIdentity;
+                objPunchOut.SenderIdentity = objFierceBook.senderIdentity;
+                objPunchOut.SenderSharedSecret = objFierceBook.sharedSecret;
+                objPunchOut.SenderUserAgent = objFierceBook.userAgent;
+                objPunchOut.RequestBuyerCookie = objFierceBook.buyerCookie;
+                objPunchOut.RequestExtrinsicUser = objFierceBook.extrinsic_user;
+                objPunchOut.RequestExtrinsicRevision = objFierceBook.extrinsic_Revision;
+                objPunchOut.RequestExtrinsicSessionId = objFierceBook.extrinsic_SessionId;
+                objPunchOut.RequestBrowserFormPostUrl = objFierceBook.browserFormPost_Url;
+                objPunchOut.RequestContactEmail = objFierceBook.email;
+                objPunchOut.RequestSupplierSetupUrl = objFierceBook.supplierSetup_Url;
+                objPunchOut.RequestSupplierPartAuxiliaryID = objFierceBook.supplierPartAuxiliaryID;
+                objPunchOut.RequestSupplierPartID = objFierceBook.supplierPartID;
+                objPunchOut.CreatedDate = DateTime.Now;
+                objPunchOut.ModifiedDate = DateTime.Now;
+                objPunchOut.IsActive = true;
+                context.PunchOutRequests.Add(objPunchOut);
+                context.SaveChanges();
+                objFierceBook.Id = objPunchOut.ID;
+            }
+            return objFierceBook;
+        }
+
+        public void InsertOrderItems(List<OrderInsert> lstOrder)
+        {
+            using (var context = new FierceCustomBookToolEntities())
+            {
+                Order objOrder = new Order();
+                objOrder.CreatedDate = DateTime.Now;
+                objOrder.IsActive = true;
+                objOrder.ModifiedDate = DateTime.Now;
+                context.Orders.Add(objOrder);
+                context.SaveChanges();
+
+                int orderId = objOrder.Id;
+
+               
+                foreach (var item in lstOrder)
+                {
+                    OrderSeqNumber objseqnumber = new OrderSeqNumber();
+                    objseqnumber.OrderId = orderId;
+                    objseqnumber.IsActive = true;
+                    objseqnumber.CreatedDate = DateTime.Now;
+                    objseqnumber.Quantity = item.Quantity;
+                    context.OrderSeqNumbers.Add(objseqnumber);
+                    context.SaveChanges();
+
+                    foreach (var subitem in item.lstgrid)
+                    {
+                        OrderItem objOrderItem = new OrderItem();
+                        objOrderItem.IsActive = true;
+                        objOrderItem.OrderSeqId = objseqnumber.Id;
+                        objOrderItem.SeqNumber = subitem.SequenceNumber;
+                        objOrderItem.GridId = subitem.Id;
+                        objOrderItem.CreatedDate = DateTime.Now;
+                        context.OrderItems.Add(objOrderItem);
+                        context.SaveChanges();
+                    }
+                }
+                
+            }
+        }
+
+        public FierceBook GetPunchOutRequestById(int id)
+        {
+            FierceBook lstSubmitted = new FierceBook();
+            using (var context = new FierceCustomBookToolEntities())
+            {
+                lstSubmitted = (from a in context.PunchOutRequests
+                                where a.ID == id
+                                select new FierceBook
+                                {
+                                    fromIdentity=a.FromIdentiy,
+                                    toIdentity = a.ToIdentity,
+                                    senderIdentity = a.SenderIdentity,
+                                    sharedSecret = a.SenderSharedSecret,
+                                    userAgent = a.SenderUserAgent,
+                                    buyerCookie = a.RequestBuyerCookie,
+                                    browserFormPost_Url = a.RequestBrowserFormPostUrl,
+                                    extrinsic_user = a.RequestExtrinsicUser,
+                                    extrinsic_Revision = a.RequestExtrinsicRevision,
+                                    extrinsic_SessionId = a.RequestExtrinsicSessionId,
+                                    email=a.RequestContactEmail,
+                                    supplierSetup_Url = a.RequestSupplierSetupUrl,
+                                    supplierPartAuxiliaryID=a.RequestSupplierPartAuxiliaryID,
+                                    supplierPartID=a.RequestSupplierPartID,
+                                    Id=a.ID
+                                }).FirstOrDefault();
+            }
+            return lstSubmitted;
+        }
+
+        public List<GridDisplay> GetGridItems(string ConverType)
+        {
+            List<GridDisplay> lstSubmitted = new List<GridDisplay>();
+            using (var context = new FierceCustomBookToolEntities())
+            {
+                lstSubmitted = (from a in context.GridItems
+                                where a.ConverstionType == ConverType && a.IsActive==true
+                                select new GridDisplay
+                                {
+                                   ConverstionType=a.ConverstionType,
+                                   CustomToolkitModule=a.CustomToolkitModule,
+                                   FlipBookModule=a.FlipBookModule,
+                                   AdditonalItem=a.AdditonalItem,
+                                   SequenceNumber=a.SequenceNumber,
+                                   IsActive=a.IsActive,
+                                   IsRequired=a.IsRequired,
+                                    Id = a.Id
+                                }).ToList();
+            }
+            return lstSubmitted;
+        }
+
+
+        public GridDisplay GetGridItems(int id, int seq)
+        {
+            GridDisplay objGrid = new GridDisplay();
+            using (var context = new FierceCustomBookToolEntities())
+            {
+                objGrid = (from a in context.GridItems
+                                where a.SequenceNumber== seq && a.Id==id && a.IsActive == true
+                                select new GridDisplay
+                                {
+                                   
+                                  CustomToolkitModule=a.CustomToolkitModule,
+                                    FlipBookModule = a.FlipBookModule,
+                                    AdditonalItem = a.AdditonalItem,
+                                    SequenceNumber = a.SequenceNumber,
+                                    IsActive = a.IsActive,
+                                    IsRequired = a.IsRequired,
+                                    Id = a.Id
+                                }).FirstOrDefault();
+            }
+            return objGrid;
+        }
+    }
+}

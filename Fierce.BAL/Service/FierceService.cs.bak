@@ -1,0 +1,61 @@
+﻿using Fierce.BAL.Interface;
+using Fierce.BAL.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Fierce.BAL.Service
+{
+   
+    public class FierceService : IFierceCustom
+    {
+        private IFierceCustom _IFierceCustom;
+        public FierceService(IFierceCustom objFierceCustom)
+        {
+            _IFierceCustom = objFierceCustom;
+        }
+        public FierceBook InsertPunchOutRequest(FierceBook FierceBook)
+        {
+            return _IFierceCustom.InsertPunchOutRequest(FierceBook);
+        }
+        public FierceBook GetPunchOutRequestById(int id)
+        {
+            return _IFierceCustom.GetPunchOutRequestById(id);
+        }
+
+        public List<GridDisplay> GetGridItems(string ConverType)
+        {
+            return _IFierceCustom.GetGridItems(ConverType);
+        }
+        public GridDisplay GetGridItems(int id, int seq)
+        {
+            return _IFierceCustom.GetGridItems(id, seq);
+        }
+        public void InsertOrderItems(List<OrderInsert> lstOrder,string username, int punchID)
+        {
+            _IFierceCustom.InsertOrderItems(lstOrder, username, punchID);
+        }
+        public List<OrderInsert> GetOrderDetailsById(int orderId)
+        {
+             return _IFierceCustom.GetOrderDetailsById(orderId);
+        }
+        public GridDisplay EditGridItems(GridDisplay gridItems, int id)
+        {
+            return _IFierceCustom.EditGridItems(gridItems,id);
+        }
+        public GridDisplay AddGridItems(GridDisplay gridItems, int seq)
+        {
+            return _IFierceCustom.AddGridItems(gridItems,seq);
+        }
+        public int GetLastSequenceNumber(string type)
+        {
+            return _IFierceCustom.GetLastSequenceNumber(type);
+        }
+        public bool DeleteModule(int id) 
+        {
+            return _IFierceCustom.DeleteModule(id);
+        }
+        
+    }
+}

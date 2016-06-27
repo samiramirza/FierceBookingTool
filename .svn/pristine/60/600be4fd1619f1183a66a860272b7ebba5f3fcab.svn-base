@@ -1,0 +1,65 @@
+﻿@model Fierce.Models.LoginModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+<style>
+    .validation-summary-errors {
+        color: red;
+    margin-top: 74px;
+    }
+    ul {
+         list-style-type: none; padding: 0px;
+    }
+    .container {
+    min-height:650px;
+    height:100%;
+    }
+    .custombutton {
+    margin-top:10px;
+    margin-left:-50px;
+    }
+    .form {
+        background-color: white;
+        margin-left: 175px;
+        margin-top: 30px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        text-align: center;
+        width: 54%;
+    }
+</style>
+
+<section id="loginForm" class="content-wrapper1">
+
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset class="loginForm" style="margin-top:40px;">
+        <div class="form">
+        <legend>Log in Form</legend>
+       
+        <ol style="padding: 0px;list-style-type: none;">
+            <li>
+                @Html.LabelFor(m => m.UserName, new {style="margin-right: 12px;"  })
+                @Html.TextBoxFor(m => m.UserName, new { Class="txt" }) <br />
+           
+            </li>
+            <li style="margin-top:10px;">
+                @Html.LabelFor(m => m.Password, new { style="margin-top: 12px;margin-right:19px;"})
+                @Html.PasswordFor(m => m.Password,new { Class="txt" }) <br />
+             
+            </li>
+           
+       </ol>
+             <input type="submit" value="Log in" class="btn custombutton" />
+            </div>
+        @*<input type="submit" value="Log in" class="btn custombutton" />*@
+    </fieldset>   
+}
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FierceCustomBookToolModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="FierceCustomBookToolModelStoreContainer">
+    <EntitySet Name="GridItem" EntityType="FierceCustomBookToolModel.Store.GridItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Order" EntityType="FierceCustomBookToolModel.Store.Order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderItem" EntityType="FierceCustomBookToolModel.Store.OrderItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderSeqNumber" EntityType="FierceCustomBookToolModel.Store.OrderSeqNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PunchOutRequest" EntityType="FierceCustomBookToolModel.Store.PunchOutRequest" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Order_PunchOutRequest" Association="FierceCustomBookToolModel.Store.FK_Order_PunchOutRequest">
+      <End Role="PunchOutRequest" EntitySet="PunchOutRequest" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Order" Association="FierceCustomBookToolModel.Store.FK_OrderItem_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderSeqNumber" EntitySet="OrderSeqNumber" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_OrderSeqNumber" Association="FierceCustomBookToolModel.Store.FK_OrderItem_OrderSeqNumber">
+      <End Role="OrderSeqNumber" EntitySet="OrderSeqNumber" />
+      <End Role="OrderItem" EntitySet="OrderItem" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="GridItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Template" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CustomToolkitModule" Type="nvarchar" MaxLength="500" />
+    <Property Name="FlipBookModule" Type="nvarchar" MaxLength="500" />
+    <Property Name="AdditonalItem" Type="nvarchar" MaxLength="500" />
+    <Property Name="PaceID" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaceFBID" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaceAddID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConverstionType" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsRequired" Type="bit" Nullable="false" />
+    <Property Name="SequenceNumber" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="PunchID" Type="int" Nullable="false" />
+    <Property Name="DROrderId" Type="int" />
+    <Property Name="TotalMoney" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShipAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="ShipName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ShipDeliverTo" Type="nvarchar" MaxLength="250" />
+    <Property Name="ShipStreet" Type="nvarchar" MaxLength="250" />
+    <Property Name="ShipCity" Type="nvarchar" MaxLength="250" />
+    <Property Name="ShipState" Type="nvarchar" MaxLength="250" />
+    <Property Name="ShipPostalCode" Type="nvarchar" MaxLength="250" />
+    <Property Name="ShipCountry" Type="nvarchar" MaxLength="250" />
+    <Property Name="BillAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="BillName" Type="nvarchar" MaxLength="250" />
+    <Property Name="BillStreet" Type="nvarchar" MaxLength="250" />
+    <Property Name="BillCity" Type="nvarchar" MaxLength="250" />
+    <Property Name="BillState" Type="nvarchar" MaxLength="250" />
+    <Property Name="BillPostalCode" Type="nvarchar" MaxLength="250" />
+    <Property Name="BillCountry" Type="nvarchar" MaxLength="250" />
+    <Property Name="UnitPriceMoney" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChargeMoney" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitOfMeasure" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeadTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExtrinsicDeliveryType" Type="nvarchar" MaxLength="250" />
+    <Property Name="OrderDate" Type="datetime" />
+    <Property Name="ExtrinsicPlacedByUser" Type="nvarchar" MaxLength="250" />
+    <Property Name="SupplierPartAuxiliaryID" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderSeqId" Type="int" Nullable="false" />
+    <Property Name="GridId" Type="int" Nullable="false" />
+    <Property Name="SeqNumber" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderSeqNumber">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="PunchOutRequest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RequestExtrinsicUser" Type="nvarchar" MaxLength="255" />
+    <Property Name="RequestSupplierPartID" Type="nvarchar" MaxLength="255" />
+    <Property Name="RequestExtrinsicRevision" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="PunchOutXml" Type="varchar" MaxLength="4096" />
+  </EntityType>
+  <Association Name="FK_Order_PunchOutRequest">
+    <End Role="PunchOutRequest" Type="FierceCustomBookToolModel.Store.PunchOutRequest" Multiplicity="1" />
+    <End Role="Order" Type="FierceCustomBookToolModel.Store.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PunchOutRequest">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="PunchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Order">
+    <End Role="Order" Type="FierceCustomBookToolModel.Store.Order" Multiplicity="1" />
+    <End Role="OrderSeqNumber" Type="FierceCustomBookToolModel.Store.OrderSeqNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderSeqNumber">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_OrderSeqNumber">
+    <End Role="OrderSeqNumber" Type="FierceCustomBookToolModel.Store.OrderSeqNumber" Multiplicity="1" />
+    <End Role="OrderItem" Type="FierceCustomBookToolModel.Store.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderSeqNumber">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="OrderSeqId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

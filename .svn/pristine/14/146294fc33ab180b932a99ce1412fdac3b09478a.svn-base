@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cXML SYSTEM "http://xml.cxml.org/schemas/cXML/1.1.007/cXML.dtd"[]>
+<cXML version="1.1.007" xml:lang="en-US" xmlID="2015-06-02T00:26:18-0500@aig.directedje.com" timestamp="2015-06-02T00:26:18-0500">
+  <Header>
+    <From>
+      <Credential domain="DUNS">
+        <Identity>012345678</Identity>
+      </Credential>
+    </From>
+    <To>
+      <Credential domain="DUNS">
+        <Identity>02-528-7058</Identity>
+      </Credential>
+    </To>
+    <Sender>
+      <Credential domain="DUNS">
+        <Identity>012345678</Identity>
+        <SharedSecret>iIkMEfuKIXFHgOw6O1QC5YxuxzTrXd25dWfB882uR61gaQw9jAOFHKUY9NXg0fQT</SharedSecret>
+      </Credential>
+      <UserAgent>Direct Response</UserAgent>
+    </Sender>
+  </Header>
+  <Request deploymentMode="production">
+    <OrderRequest>
+      <OrderRequestHeader orderDate="05/29/2015" orderID="164008" orderType="regular" orderVersion="1" type="new">
+        <Total>
+          <Money currency="USD">0</Money>
+        </Total>
+        <ShipTo>
+          <Address addressID="W00001" isoCountryCode="US">
+            <Name xml:lang="en">Test+Company</Name>
+            <PostalAddress name="default">
+              <DeliverTo>Mary Brennan</DeliverTo>
+              <DeliverTo>Test+Company</DeliverTo>
+              <Street>117+E+LOUISA+ST+PMB+132</Street>
+              <City>SEATTLE</City>
+              <State>WA</State>
+              <PostalCode>98102-3203</PostalCode>
+              <Country isoCountryCode="US">United States</Country>
+            </PostalAddress>
+            <Email name="default" preferredLang="en-US">null%40null.com</Email>
+          </Address>
+        </ShipTo>
+        <BillTo>
+          <Address addressID="W00001" isoCountryCode="US">
+            <Name xml:lang="en">Test+Company</Name>
+            <PostalAddress name="default">
+              <Street>117+E+LOUISA+ST+PMB+132</Street>
+              <City>SEATTLE</City>
+              <State>WA</State>
+              <PostalCode>98102-3203</PostalCode>
+              <Country isoCountryCode="US">United States</Country>
+            </PostalAddress>
+          </Address>
+        </BillTo>
+        <PaymentTerm payInNumberOfDays="0">
+        </PaymentTerm>
+      </OrderRequestHeader>
+      <ItemOut lineNumber="1" quantity="1">
+        <ItemID>
+          <SupplierPartID>2</SupplierPartID>
+          <SupplierPartAuxiliaryID>BookTest1</SupplierPartAuxiliaryID>
+        </ItemID>
+        <ItemDetail>
+          <UnitPrice>
+            <Money currency="USD">0</Money>
+          </UnitPrice>
+          <Description xml:lang="en">Custom+Toolkit+Test</Description>
+          <UnitOfMeasure>EA</UnitOfMeasure>
+          <LeadTime>0</LeadTime>
+          <Extrinsic name="DeliveryType">Ship</Extrinsic>
+          <Extrinsic name="PlacedByUser">test@test.com</Extrinsic>
+        </ItemDetail>
+        <Distribution>
+          <Charge>
+            <Money currency="USD">0</Money>
+          </Charge>
+        </Distribution>
+      </ItemOut>
+ <ItemOut lineNumber="1" quantity="1">
+        <ItemID>
+          <SupplierPartID>3</SupplierPartID>
+          <SupplierPartAuxiliaryID>BookTest2</SupplierPartAuxiliaryID>
+        </ItemID>
+        <ItemDetail>
+          <UnitPrice>
+            <Money currency="USD">0</Money>
+          </UnitPrice>
+          <Description xml:lang="en">Custom+Toolkit+Test333</Description>
+          <UnitOfMeasure>EA</UnitOfMeasure>
+          <LeadTime>0</LeadTime>
+          <Extrinsic name="DeliveryType">Shiping</Extrinsic>
+          <Extrinsic name="PlacedByUser">test@test.com</Extrinsic>
+        </ItemDetail>
+        <Distribution>
+          <Charge>
+            <Money currency="USD">0</Money>
+          </Charge>
+        </Distribution>
+      </ItemOut>
+    </OrderRequest>
+  </Request>
+</cXML>

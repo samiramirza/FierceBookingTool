@@ -1,0 +1,141 @@
+F:\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+F:\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+F:\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+F:\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+G:\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+G:\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+G:\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+G:\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+E:\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+E:\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+E:\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+E:\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+C:\Users\Master\Desktop\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+C:\Users\Master\Desktop\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+C:\Users\Master\Desktop\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+C:\Users\Master\Desktop\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+C:\GitHub\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\bin\Debug\Fierce.BAL.dll.config
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\bin\Debug\System.Data.SqlServerCe.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\FierceCustomBook\Fierce.BAL\obj\Debug\Fierce.BAL.csprojResolveAssemblyReference.cache
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\bin\Debug\Fierce.BAL.dll.config
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.dll
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.xml
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\obj\Debug\Fierce.BAL.csprojResolveAssemblyReference.cache
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+C:\Users\Master\Desktop\FierceCustomBook\FierceCustomBook\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll.config
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\System.Data.SqlServerCe.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.xml
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.xml
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+F:\DCGWESTGIT\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.csprojResolveAssemblyReference.cache
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll.config
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\System.Data.SqlServerCe.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.xml
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.xml
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.csprojResolveAssemblyReference.cache
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+E:\Gunjan\DotNet Projects\Dcg Projects\FierceBookTool\FierceCustomBookTool\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+G:\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll.config
+G:\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+G:\Fierce\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+G:\Fierce\Fierce.BAL\bin\Debug\EntityFramework.dll
+G:\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.dll
+G:\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.dll
+G:\Fierce\Fierce.BAL\bin\Debug\System.Data.SqlServerCe.dll
+G:\Fierce\Fierce.BAL\bin\Debug\EntityFramework.xml
+G:\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.xml
+G:\Fierce\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.xml
+G:\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+G:\Fierce\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\bin\Debug\Fierce.BAL.dll.config
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\bin\Debug\System.Data.SqlServerCe.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.xml
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.xml
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.xml
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBook\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\bin\Debug\Fierce.BAL.dll.config
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\bin\Debug\System.Data.SqlServerCe.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.xml
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.xml
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+E:\DCGWESTGIT\FierceCustomBookTool\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\bin\Debug\Fierce.BAL.dll.config
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\bin\Debug\System.Data.SqlServerCe.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.xml
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceCustomBookTool\Fierce.BAL\obj\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\bin\Debug\Fierce.BAL.dll.config
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\bin\Debug\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\bin\Debug\Fierce.BAL.pdb
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\bin\Debug\EntityFramework.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\bin\Debug\System.Data.SqlServerCe.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\bin\Debug\EntityFramework.xml
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServer.xml
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\bin\Debug\EntityFramework.SqlServerCompact.xml
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\obj\Debug\Fierce.BAL.csprojResolveAssemblyReference.cache
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\obj\Debug\Fierce.BAL.dll
+M:\Bharti_Projects\AMEX\FierceBookingTool\Fierce.BAL\obj\Debug\Fierce.BAL.pdb

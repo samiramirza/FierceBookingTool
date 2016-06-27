@@ -1,0 +1,463 @@
+﻿@model Fierce.Models.GridDisplayModel
+
+@{
+    ViewBag.Title = "GridDisplay";
+}
+<p style="color: red;">@ViewBag.QString</p>
+<style>
+    /*.dragdrop {
+background:red;
+margin:15px;
+width:100%;
+}*/
+    .ui-state-hover {
+        background: lightyellow;
+    }
+
+    .ui-state-active {
+        background: lightgray;
+    }
+  
+</style>
+@using (Html.BeginForm("GridDisplay", "CustomBook", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.hdnType)
+    @Html.HiddenFor(m => m.hdnString)
+    @Html.HiddenFor(m => m.hdnSubmit)
+    @Html.HiddenFor(m => m.username)
+    @Html.HiddenFor(m => m.punchID)
+  
+
+    
+    <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 outerdiv ">
+        <div class="col-lg-12 col-md-12  col-sm-12 col-xs-12 nopadIphone ">
+            <ul class="nav nav-tabs hidden" style="margin-bottom: 20px;">
+                <li><a href="#" class="first">EC</a></li>
+                <li><a href="#" class="second">ED</a></li>
+            </ul>
+            @*  @Html.DropDownList("ddlstType", new SelectList(Fierce.Models.GridDisplayModel.lstType), "Select", new { @class = "drop" })*@
+        </div>
+        <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 nopadIphone" style="float: left;">
+            <div class="col-xs-12 nopad"  style="margin-bottom: 20px;float:left;">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 nopad" style="font-weight: bold; padding-top: 7px;">Project Name</div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12  " style="font-weight: bold; padding-top: 7px;">@Html.TextBoxFor(m=>m.ProjectName,new{style="width:100%;"})
+            </div></div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopad" style="font-weight: bold; padding-top: 7px;">Choose Optional Modules</div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="font-weight: bold; padding-top: 7px;">Drag and Drop order of Optional Modules</div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopad mainGrid" id="mainGridDisplay">
+
+                @if (Model.lstGridDisplay.Count() > 0)
+                {
+
+                    foreach (var i in Model.lstGridDisplay)
+                    {
+                        string complete = "";
+                    <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 fulliteration nopad">
+
+                        <div class="col-xs-2 iterationchk">
+                            @if (i.IsRequired == true)
+                            {
+                                <label class="hidden-xs">Included</label>
+                                <img src="~/Images/check.png" class="visible-xs" style="margin: 0 auto;" />
+                            }
+                            else
+                            {
+                                <input type="checkbox"  id="chk_@i.SequenceNumber"  data-id="@i.Id" class="check " />
+                              
+                            }
+                        </div>
+                        @if (i.CustomToolkitModule != null && i.CustomToolkitModule != "")
+                        {
+                            complete = i.CustomToolkitModule;
+                        }
+                        @if (i.FlipBookModule != null && i.FlipBookModule != "")
+                        {
+                            if (complete != "")
+                            {
+                                complete += "/" + i.FlipBookModule;
+                            }
+                            else
+                            {
+                                complete = i.FlipBookModule;
+                            }
+                        }
+                        @if (i.AdditonalItem != null && i.AdditonalItem != "")
+                        {
+                            if (complete != "")
+                            {
+                                complete += "/" + i.AdditonalItem;
+                            }
+                            else
+                            {
+                                complete = i.AdditonalItem;
+                            }
+                        }
+                        @if (i.IsRequired == true)
+                        {
+                            <div class="col-xs-10 iteration included" id="reqiterate_@i.SequenceNumber"  data-id="@i.Id">@complete</div>
+                        }
+                        else
+                        {
+                            <div class="col-xs-10 iteration" id="iterate_@i.SequenceNumber"  data-id="@i.Id">@complete</div>
+                        }
+                    </div>
+                    }
+
+                }
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadIphone leftIphone" id="sortablemain">
+
+                <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 nopad sideGrid">
+
+                    <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 nodrag  nopad">
+                        <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12  dragdrop selectedText" style="padding-top: 7px;">
+                            <p style="font-weight: bold;">Selected </p>
+                        </div>
+                        
+                        <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 nopad drag1">
+                        </div>
+
+                    </div>
+                     <div class="col-lg-12 col-md-12  col-sm-12 col-xs-12 nopad" id="sortable2"></div>
+                    <div class="col-lg-12 col-md-12  col-sm-12 col-xs-12 nopad " id="sortable">
+                    </div>
+                    <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 nodrag drag2 nopad">
+                    </div>
+                    <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 drag3 nopad">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 col-md-12  col-sm-12 col-xs-12 nopadIphone" style="margin-top: 20px; float: left;">
+            @Html.TextBoxFor(m => m.quantity, new { maxlength = "3", Placeholder = "Quantity", @class = "number", style = "border: 1px solid #797979;padding:5px; margin-right: 20px;width: 65px;" })
+            <input type="button" value="Create Toolkit" class="btn custombutton" id="btnAdd" />
+        </div>
+
+        <div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 basketDisplay hidden nopadIphone" style="clear: both; float: left;">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 mainGrid " style="margin-top: 20px;">
+                <p style="font-weight: bold; padding-top: 7px;">Confirm order of modules</p>
+                <div class="col-xs-12 basketGrid nopad">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+            </div>
+            <div class=" col-lg-11 col-md-11  col-sm-11  col-xs-11 nopad" style="margin-top: 20px;">
+
+                <div class="agreement col-lg-12 col-md-12  col-sm-12  col-xs-12 nopad">
+                    <input type="checkbox" id="chkAgree" name="agree" />
+                    I have checked my Custom Book for accuracy.  I understand:<br />
+                    <br />
+
+                    1.	My Toolkit will be printed <b>in the EXACT order</b> as listed here.<br />
+                    2.	It is my responsibility to verify the order of the Toolkit modules. 
+                </div>
+
+                <input type="submit" value="Add to Cart" class="btn custombutton" id="btnContinue"  style="margin-top: 20px;" />
+            </div>
+        </div>
+
+
+    </div>
+
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        fillSortable();
+        $('#btnContinue').prop("disabled", true);
+
+        function fillSortable() {
+            if ('@Model.hdnType' != "ST") {
+                var count = 1;
+                $('.included').each(function () {
+
+                    var seq = $(this).attr("id").split("_")[1];
+                    var id = $(this).attr("data-id");
+                    var content = $(this).html();
+                    if (count > 2) {
+                      
+                        $('.drag2').append("<div class='col-lg-12 col-md-12  col-sm-12  col-xs-12 iterationsyd dragdrop' data-seq='" + seq + "'  id='" + id + "'>" + content + "</div>");
+                    }
+                    else {
+                        $('.drag1').append("<div class='col-lg-12 col-md-12  col-sm-12  col-xs-12 iterationsyd dragdrop' data-seq='" + seq + "'  id='" + id + "'>" + content + "</div>");
+                    }
+                    count += 1;
+                });
+            }
+            else {
+                //<div class="col-lg-12 col-md-12  col-sm-12 col-xs-12 nopad" id="sortable">
+                // </div>
+                $('#sortable').addClass("hidden");
+                $('#sortable2').removeClass("hidden");
+                
+                $('.included').each(function () {
+
+                    var seq = $(this).attr("id").split("_")[1];
+                    var id = $(this).attr("data-id");
+                    var content = $(this).html();                  
+                    $('.drag2').append("<div class='col-lg-12 col-md-12  col-sm-12  col-xs-12 iterationsyd dragdrop' data-seq='" + seq + "'  id='" + id + "'>" + content + "</div>");
+                   
+                });
+
+            }
+        }
+        var counter = 0;
+        var basketArray = [];
+        $('#quantity').val("1");
+        $('.check').each(function () {
+            $(this).prop("checked", false);
+        });
+        $(".number").keydown(function (event) {
+            // Allow: backspace, delete, tab, escape, and enter
+            if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 ||
+                // Allow: Ctrl+A
+                (event.keyCode == 65 && event.ctrlKey === true) ||
+                // Allow: home, end, left, right
+                (event.keyCode >= 35 && event.keyCode <= 39)) {
+                // let it happen, don't do anything
+                return;
+            }
+            else {
+                // Ensure that it is a number and stop the keypress
+                if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                    event.preventDefault();
+                }
+            }
+        });
+
+
+        $("#sortable").sortable({
+            revert: true
+        });
+
+        $("#sortable2").sortable({
+            revert: true
+        });
+
+        
+        $('#chkAgree').on("click", function () {
+            if ($(this).is(':checked')) {
+                $('#btnContinue').prop("disabled", false);
+            }
+            else
+                $('#btnContinue').prop("disabled", true);
+        });
+
+        
+
+        function gridCall(type) {
+            $.blockUI({
+                message: 'Please wait..',
+                css: {
+                    border: 'none',
+                    padding: '15px',
+                    backgroundColor: '#000',
+                    '-webkit-border-radius': '10px',
+                    '-moz-border-radius': '10px',
+                    opacity: 1,
+                    color: '#fff'
+                }
+            });
+
+
+            $.ajax({
+                url: '@Url.Action("GetGridbyType", "CustomBook")',
+                type: 'POST',
+                data: { 'type': type },
+                dataType: 'json',
+                success: function (response) {
+
+                    $.unblockUI();
+                    $('#mainGridDisplay').html('');
+                    $('#sortable').html('');
+                    $('.drag1').html('');
+                    $('.drag2').html('');
+                    if (response.CarList != "") {
+                        var items = "";
+                        if (type == "EC") {
+
+                            $('.first').addClass("active");
+                            $('.second').removeClass("active");
+                            $('#hdnType').val("EC");
+                        }
+                        else if (type == "ED") {
+                            $('.second').addClass("active");
+                            $('.first').removeClass("active");
+                            $('#hdnType').val("ED");
+                        }
+
+                        //  $('.tableView').show()
+                        $.each(response.CarList, function (i, item) {
+                            var complete = "";
+                            if (item.CustomToolkitModule != null && item.CustomToolkitModule != "") {
+                                complete = item.CustomToolkitModule;
+                            }
+                            if (item.FlipBookModule != null && item.FlipBookModule != "") {
+                                if (complete != "") {
+                                    complete += "/" + item.FlipBookModule;
+                                }
+                                else {
+                                    complete = item.FlipBookModule;
+                                }
+                            }
+                            if (item.AdditonalItem != null && item.AdditonalItem != "") {
+                                if (complete != "") {
+                                    complete += "/" + item.AdditonalItem;
+                                }
+                                else {
+                                    complete = item.AdditonalItem;
+                                }
+                            }
+
+
+
+                            var chk = "";
+                            var seqId = "";
+                            if (item.IsRequired == true) {
+                                chk = '<label class="hidden-xs">Included</label><img src="http://50.57.7.78/fierce/Images/check.png" class="visible-xs" style="margin: 0 auto;" />';
+                                var seq = "reqiterate_" + item.SequenceNumber;
+                                seqId = '<div class="col-xs-10 iteration included" id=' + seq + ' data-id';
+                            }
+                            else {
+                                var chkId = "chk_" + item.SequenceNumber;
+                                chk = '<input type="checkbox"  id=' + chkId + '  data-id=' + item.Id + ' class="check" />';
+                                var seq = "iterate_" + item.SequenceNumber;
+                                seqId = '<div class="col-xs-10 iteration " id=' + seq + ' data-id';
+
+                            }
+
+
+                            items += '<div class="col-lg-12 col-md-12  col-sm-12  col-xs-12 fulliteration nopad"><div class="col-xs-2 iterationchk">' + chk + '</div>' +
+                                seqId + '=' + item.Id + '>' + complete + '</div></div>';
+
+                        });
+
+                        $('#mainGridDisplay').html(items);
+                        fillSortable();
+                    }
+                    else {
+                        //$('.tableView').show();
+                        //items += '<tr class="rowDiv"><td class="cellDiv">No results found</td></tr>';
+
+                        $('#mainGridDisplay').html("No results found");
+                    }
+                },
+                error: function (error) {
+                    $.unblockUI();
+                    alert('error');
+
+                }
+            });
+
+        }
+
+
+        $('#mainGridDisplay ').on('click', '.check', function () {
+            //   $('.check').on("click", function () {
+
+            var seq = $(this).attr("id").split("_")[1];
+            var id = $(this).attr("data-id");
+            // alert(id);
+          
+            if ($(this).is(":checked")) {
+                var txt = "<div class='col-xs-12 iterationsyd dragdrop' data-seq='" + seq + "' id='" + id + "'>" + $(this).parent().next().html() + "</div>";
+                if ('@Model.hdnType' != "ST") {
+                    if ('@Model.hdnType' == "CT") {
+                        if (seq == 13) {
+                            $(".drag3").append(txt);
+                        }
+                        else
+                            $("#sortable").append(txt);
+                    }
+                    else {
+                        $("#sortable").append(txt);
+                    }
+                }
+               
+                else {
+                    
+                    if (seq == 7) {                     
+                        $(".drag3").append(txt);
+                    }
+                    else
+                    $("#sortable2").append(txt);
+                }
+            }
+            else {
+
+                $(".iterationsyd").each(function () {
+                    var iterateid = $(this).attr("id");
+                    if (iterateid == id) {
+                        $(this).remove();
+                    }
+                });
+            }
+        });
+
+
+        $('#btnAdd').on("click", function () {
+
+            if ($('#quantity').val() > 0) {
+                $('#quantity').css("border", "1px solid #797979");
+                if ($('.basketDisplay').hasClass("hidden"))
+                    $('.basketDisplay').removeClass("hidden");
+
+                counter += 1;
+                var quant = $('#quantity').val();
+                quant = Number(quant).toString();
+                var iterate = "<div class='basket' data-count='" + counter + "'><p><span>Quantity-" + quant + "</span><span class='close1'>x</span></p>";
+                $('.iterationsyd').each(function () {
+                    var id = $(this).attr("id");
+                    iterate += " <div  data-type='" + $('#hdnType').val() + "'  data-count='" + counter + "' data-Quant='" + quant + "'  data-id='" + id + "'>" + $(this).html() + "</div>";
+                });
+                $('.basketGrid').prepend(iterate + "</div>");
+
+                $('.check').each(function () {
+                    $(this).prop("checked", false);
+                });
+                $("#sortable").html("");
+                $("#sortable2").html("");
+                $(".drag3").html("");
+                $('#quantity').val("1");
+                $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+            }
+            else {
+                $('#quantity').css("border", "1px solid red");
+            }
+
+        });
+
+        $('#btnContinue').on("click", function () {
+            $('.basket div').each(function () {
+                var id = $(this).attr("data-id");
+                var count = $(this).attr("data-count");
+                var quant = $(this).attr("data-Quant");
+                var type = $(this).attr("data-type");
+                var item = [id, count, quant, type];
+                basketArray.push(item);
+            });
+            $('#hdnString').val(basketArray.join(";"));
+            $('#hdnSubmit').val("submit");
+            $('#username').val('@Model.username');
+            $('#punchID').val('@Model.punchID');
+        });
+
+
+        $('.basketDisplay').on('click', 'span.close1', function (event) {
+
+            $(this).parent().parent().remove();
+            var count = 0;
+            $('.basket').each(function () {
+                count += 1;
+            });
+
+            if (count < 1)
+                $('.basketDisplay').addClass('hidden');
+            else
+                $('.basketDisplay').removeClass('hidden');
+        });
+
+    });
+</script>

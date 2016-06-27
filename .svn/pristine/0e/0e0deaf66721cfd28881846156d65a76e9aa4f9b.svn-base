@@ -1,0 +1,147 @@
+﻿@model Fierce.Models.AdminModel
+@{
+    ViewBag.Title = "ViewDetail";
+}
+<style>
+    .head {
+        font-weight: bold;
+    }
+    .excelfly {
+        position:absolute;right:0%;
+    }
+</style>
+
+@using (Html.BeginForm("ViewDetail", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.DRorderID);           
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outerdiv">
+        
+         @Html.ActionLink("Back to Orders","ViewOrders",null,htmlAttributes: new { @class="btn custombutton addbtn", style="margin-bottom:20px;margin-right:0px;"})
+              
+        <div class="col-xs-12 mainGrid">
+            @if (Model.lstFierceOutRequest != null && Model.lstFierceOutRequest.Count() > 0)
+            {
+                <h1>Order Details</h1>
+                <input type="button" value="Export Order Details to Excel" id="createexcel" class="btn custombutton addbtn excelfly" />
+                
+                int count = 1;
+                foreach (var i in Model.lstFierceOutRequest)
+                {
+                    if (count == 1)
+                    {
+                <label class="head">Order No.:</label> <label class="orderID">@i.DROrderId</label><br />   
+                     
+                <label class="head">Order Date:</label> <label>@i.OrderDate.ToShortDateString()</label><br />
+                    }
+
+                    foreach (var item in @i.lstOutItems)
+                    {
+                <h3 style="text-decoration: underline; color: #f68026;">Item  @count</h3>@*
+                <label class="head">SupplierPartID:</label> <label>@item.SupplierPartID</label><br />*@
+                <label class="head">Item Number:</label> <label>@item.SupplierPartAuxiliaryID</label><br />
+                <label class="head">Quantity:</label> <label>@item.quanity</label><br />
+                 <label class="head">Delivery Type:</label> <label>@item.ExtrinsicDeliveryType</label>
+                <p style="text-decoration: underline; font-weight: bold; color: #f68026; margin-top: 20px;">Custom Toolkit Build</p>
+                        int counter1 = 1;
+                        foreach (var subitem in @i.lstgrid)
+                        {
+
+                            if (subitem.CustomToolkitModule != null && subitem.CustomToolkitModule != "")
+                            {
+                                if (subitem.IsRequired == true)
+                                {
+                <p style="color: #f68026;">@counter1) @subitem.CustomToolkitModule</p>
+                                }
+                                else
+                                {
+                <p>@counter1) @subitem.CustomToolkitModule</p>
+                                }
+                                counter1 = counter1 + 1;
+
+                            }
+                        }
+                <p style="text-decoration: underline; font-weight: bold; color: #f68026; margin-top: 20px;">Custom Flip Book Build</p>
+                        int counter2 = 1;
+                        foreach (var subitem in @i.lstgrid)
+                        {
+
+                            if (subitem.FlipBookModule != null && subitem.FlipBookModule != "")
+                            {
+                                if (subitem.IsRequired == true)
+                                {
+                <p style="color: #f68026;">@counter2) @subitem.FlipBookModule</p>
+                                }
+                                else
+                                {
+                <p>@counter2) @subitem.FlipBookModule</p>
+                                }
+                                counter2 = counter2 + 1;
+                            }
+                        }
+                <p style="text-decoration: underline; font-weight: bold; color: #f68026; margin-top: 20px;">Additional Items</p>
+                        int counter3 = 1;
+                      
+                        foreach (var subitem in @i.lstgrid)
+                        {
+
+                            if (subitem.AdditonalItem != null && subitem.AdditonalItem != "")
+                            {
+                                if (subitem.IsRequired == true)
+                                {
+                <p style="color: #f68026;">@counter3) @subitem.AdditonalItem</p>
+                                }
+                                else
+                                {
+                <p>@counter3) @subitem.AdditonalItem</p>
+                                }
+                                counter3 = counter3 + 1;
+                            }
+                            
+                        }
+                        if (counter3 == 1)
+                        {
+                             <p >NA</p>
+                        }
+                    }
+                <label class="head">Total Money:</label> <label>@i.TotalMoney</label><br />
+                <p style="text-decoration: underline; font-weight: bold; color: #f68026; margin-top: 20px;">Shipping Address</p>
+                <label class="head">Shipping Name:</label> <label>@i.ShipName</label>     <br />          
+                <label class="head">Shipping Deleiver To:</label> <label>@i.ShipDeliverTo</label><br />
+                <label class="head">Shipping Address:</label> <label>@i.ShipStreet, @i.ShipCity, @i.ShipState, @i.ShipCountry</label><br />
+                <label class="head">Shipping Postal Code:</label> <label>@i.ShipPostalCode</label>   <br />            
+                 
+                <p style="text-decoration: underline; font-weight: bold; color: #f68026; margin-top: 20px;">Billing Address</p>
+                <label class="head">Billing Name:</label> <label>@i.BillName</label>   <br />   
+                <label class="head">Billing Address:</label> <label>@i.BillStreet, @i.BillCity, @i.BillState, @i.BillCountry</label><br />
+                <label class="head">Billing Postal Code:</label> <label>@i.BillPostalCode</label>               
+                    count += 1;
+                <hr style="border-bottom: 1px solid #333;" />                       
+                }
+            }
+        </div>
+    </div>
+    
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+      
+        $('#createexcel').click(function () {      
+            //$("id").val($('.orderID').text().trim());
+          //  debugger;
+            var src = document.location.href;
+            var paramresult = src.split("=")[1];
+            var val1 = paramresult.trim();
+            $("#DRorderID").val(val1);
+          
+            $("form").submit();
+        });
+
+        function getParameterByName(name, p) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(p);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+    });
+ 
+</script>

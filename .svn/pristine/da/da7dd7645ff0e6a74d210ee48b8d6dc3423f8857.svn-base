@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE cXML SYSTEM "http://xml.cxml.org/schemas/cXML/1.1.007/cXML.dtd"[]>
+<cXML version="1.1.007" xml:lang="en-US" payloadID="1" timestamp="20150518T06:12:08-04:00">
+  <Header>
+    <From>
+      <Credential domain="DUNS">
+        <Identity>012345678</Identity>
+      </Credential>
+    </From>
+    <To>
+      <Credential domain="DUNS">
+        <Identity>02-528-7058</Identity>
+      </Credential>
+    </To>
+    <Sender>
+      <Credential domain="DUNS">
+        <Identity>012345678</Identity>
+      </Credential>
+      <UserAgent>Direct Response</UserAgent>
+    </Sender>
+  </Header>
+  <Message >
+    <PunchOutOrderMessage>
+      <BuyerCookie>NOTUSED</BuyerCookie>
+      <PunchOutOrderMessageHeader operationAllowed="inspect">
+        <Total>
+          <Money currency="USD">0.0</Money>
+        </Total>
+      </PunchOutOrderMessageHeader>
+      <ItemIn quantity="1">
+        <ItemID>
+          <SupplierPartID>15069</SupplierPartID>
+          <SupplierPartAuxiliaryID>Custom Toolkit Test</SupplierPartAuxiliaryID>
+        </ItemID>
+        <ItemDetail>
+          <UnitPrice>
+            <Money currency="USD"></Money>
+          </UnitPrice>
+          <Description xml:lang="en">Description of Item</Description>
+          <UnitOfMeasure>EA</UnitOfMeasure>
+          <Classification domain="UNSPSC">NOTUSED</Classification>
+       </ItemDetail>
+      </ItemIn>
+    </PunchOutOrderMessage>
+  </Message>
+</cXML>
+

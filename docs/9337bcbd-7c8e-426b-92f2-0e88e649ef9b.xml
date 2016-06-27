@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE cXML SYSTEM "http://xml.cxml.org/schemas/cXML/1.1.007/cXML.dtd"[]>
+<cXML version="1.1.007" xml:lang="en-US" payloadID="20100427T16:24:13-04:00@aig.directedje.com" timestamp="20100427T16:24:13-04:00">
+  <Header>
+    <From>
+      <Credential domain="DUNS">
+        <Identity>012345678</Identity>
+      </Credential>
+    </From>
+    <To>
+      <Credential domain="DUNS">
+        <Identity>02-528-7058</Identity>
+      </Credential>
+    </To>
+    <Sender>
+      <Credential domain="DUNS">
+        <Identity>012345678</Identity>
+        <SharedSecret>iIkMEfuKIXFHgOw6O1QC5YxuxzTrXd25dWfB882uR61gaQw9jAOFHKUY9NXg0fQT</SharedSecret>
+      </Credential>
+      <UserAgent>Direct Response</UserAgent>
+    </Sender>
+  </Header>
+  <Request>
+    <PunchOutSetupRequest operation="create">
+      <BuyerCookie>NOTUSED</BuyerCookie>
+      <Extrinsic name="User">johnnydepp</Extrinsic>
+      <BrowserFormPost>
+        <URL>https://shops3.directedje.com/Illumina/pod-punch-in.asp</URL>
+      </BrowserFormPost>
+      <Contact>
+        <Email>mbrennan@dcgwest.com</Email>
+      </Contact>
+      <SupplierSetup>
+        <URL>https://www.dcgonline.net/Illumina/DEIntegration/AcceptPunchOutRequest.aspx</URL>
+        <Extrinsic name="sessionid">176037839</Extrinsic>
+      </SupplierSetup>
+      <SelectedItem>
+        <ItemID>
+          <SupplierPartID>770-2013-053-VDP</SupplierPartID>
+          <SupplierPartAuxiliaryID>Photo+Business+Card+%28non%2Dlinen%2Fsmooth+paper+stock%29+%2D+Qty+%3D+500</SupplierPartAuxiliaryID>
+          <Extrinsic name="revision" >1) 500</Extrinsic>
+        </ItemID>
+      </SelectedItem>
+    </PunchOutSetupRequest>
+  </Request>
+</cXML>

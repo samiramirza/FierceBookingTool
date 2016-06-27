@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FierceCustomBookToolModelStoreContainer" CdmEntityContainer="FierceCustomBookToolEntities">
+    <EntitySetMapping Name="GridItems">
+      <EntityTypeMapping TypeName="FierceCustomBookToolModel.GridItem">
+        <MappingFragment StoreEntitySet="GridItem">
+          <ScalarProperty Name="Template" ColumnName="Template" />
+          <ScalarProperty Name="PaceAddID" ColumnName="PaceAddID" />
+          <ScalarProperty Name="PaceFBID" ColumnName="PaceFBID" />
+          <ScalarProperty Name="PaceID" ColumnName="PaceID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomToolkitModule" ColumnName="CustomToolkitModule" />
+          <ScalarProperty Name="FlipBookModule" ColumnName="FlipBookModule" />
+          <ScalarProperty Name="AdditonalItem" ColumnName="AdditonalItem" />
+          <ScalarProperty Name="ConverstionType" ColumnName="ConverstionType" />
+          <ScalarProperty Name="IsRequired" ColumnName="IsRequired" />
+          <ScalarProperty Name="SequenceNumber" ColumnName="SequenceNumber" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="FierceCustomBookToolModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="SupplierPartAuxiliaryID" ColumnName="SupplierPartAuxiliaryID" />
+          <ScalarProperty Name="ExtrinsicPlacedByUser" ColumnName="ExtrinsicPlacedByUser" />
+          <ScalarProperty Name="ExtrinsicDeliveryType" ColumnName="ExtrinsicDeliveryType" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="LeadTime" ColumnName="LeadTime" />
+          <ScalarProperty Name="UnitOfMeasure" ColumnName="UnitOfMeasure" />
+          <ScalarProperty Name="ChargeMoney" ColumnName="ChargeMoney" />
+          <ScalarProperty Name="UnitPriceMoney" ColumnName="UnitPriceMoney" />
+          <ScalarProperty Name="BillCountry" ColumnName="BillCountry" />
+          <ScalarProperty Name="BillPostalCode" ColumnName="BillPostalCode" />
+          <ScalarProperty Name="BillState" ColumnName="BillState" />
+          <ScalarProperty Name="BillCity" ColumnName="BillCity" />
+          <ScalarProperty Name="BillStreet" ColumnName="BillStreet" />
+          <ScalarProperty Name="BillName" ColumnName="BillName" />
+          <ScalarProperty Name="BillAddress" ColumnName="BillAddress" />
+          <ScalarProperty Name="ShipCountry" ColumnName="ShipCountry" />
+          <ScalarProperty Name="ShipPostalCode" ColumnName="ShipPostalCode" />
+          <ScalarProperty Name="ShipState" ColumnName="ShipState" />
+          <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+          <ScalarProperty Name="ShipStreet" ColumnName="ShipStreet" />
+          <ScalarProperty Name="ShipDeliverTo" ColumnName="ShipDeliverTo" />
+          <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+          <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+          <ScalarProperty Name="TotalMoney" ColumnName="TotalMoney" />
+          <ScalarProperty Name="DROrderId" ColumnName="DROrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PunchID" ColumnName="PunchID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItems">
+      <EntityTypeMapping TypeName="FierceCustomBookToolModel.OrderItem">
+        <MappingFragment StoreEntitySet="OrderItem">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderSeqId" ColumnName="OrderSeqId" />
+          <ScalarProperty Name="GridId" ColumnName="GridId" />
+          <ScalarProperty Name="SeqNumber" ColumnName="SeqNumber" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderSeqNumbers">
+      <EntityTypeMapping TypeName="FierceCustomBookToolModel.OrderSeqNumber">
+        <MappingFragment StoreEntitySet="OrderSeqNumber">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PunchOutRequests">
+      <EntityTypeMapping TypeName="FierceCustomBookToolModel.PunchOutRequest">
+        <MappingFragment StoreEntitySet="PunchOutRequest">
+          <ScalarProperty Name="PunchOutXml" ColumnName="PunchOutXml" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="RequestExtrinsicRevision" ColumnName="RequestExtrinsicRevision" />
+          <ScalarProperty Name="RequestSupplierPartID" ColumnName="RequestSupplierPartID" />
+          <ScalarProperty Name="RequestExtrinsicUser" ColumnName="RequestExtrinsicUser" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
